@@ -23,13 +23,13 @@ describe('<ProjectCard />', () => {
         );
     });
 
-    test('renders project properly', () => { //it
+    test('renders project properly', () => {
         expect(screen.getByRole('heading')).toHaveTextContent(project.name);
-        screen.queryByText(/this is really difficult\.\.\./i); //get
-        screen.queryByText(/budget : 100/i); //get
+        screen.queryByText(/this is really difficult\.\.\./i);
+        screen.queryByText(/budget : 100/i);
     });
 
-    test('handler called when edit clicked', () => { //it
+    test('handler called when edit clicked', () => {
         userEvent.click(
             screen.getByRole('button')
         );
